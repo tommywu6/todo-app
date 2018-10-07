@@ -9,15 +9,18 @@
     "format": "prettier --write --single-quote --no-semi --print-width=120 --parser=flow --tab-width=2 \"src/**/*.{js,jsx} \"",
     "lint": "eslint 'src/**/*.{js,jsx}' --quiet",
     "lint:fix": "eslint '**/*.{js,jsx}' --fix",
-    "build": "npm run format && npm run lint && webpack"
+    "build": "npm run format && npm run lint && webpack",
+    "build:watch": "npm run format && npm run lint && webpack --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "4.16.3",
+    "prop-types": "15.6.2",
     "react": "16.5.2",
-    "react-dom": "16.5.2"
+    "react-dom": "16.5.2",
+    "styled-components": "3.4.9"
   },
   "devDependencies": {
     "@babel/core": "7.1.2",
