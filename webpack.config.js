@@ -2,7 +2,7 @@ const path = require('path')
 
 const config = {
     context: __dirname,
-    entry: './src/App.jsx',
+    entry: './src/index.jsx',
     devtool: 'cheap-eval-source-map',
     output: {
         path: path.join(__dirname, 'public/js'),
