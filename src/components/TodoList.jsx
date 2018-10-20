@@ -1,16 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
-import TodoItem from './TodoItem'
+import React from "react"
+import styled from "styled-components"
+import PropTypes from "prop-types"
+import TodoItem from "./TodoItem"
 
 const StyledUl = styled.ul`
-  padding: 0;
+	padding: 0;
 `
 
-const TodoList = () => (
-  <StyledUl>
-    <TodoItem id="todo-1" title="Learn React.js" />
-    <TodoItem id="todo-2" title="Learn Vue.js" />
-    <TodoItem id="todo-3" title="Learn Lumen" />
-  </StyledUl>
-)
+const TodoList = props => {
+	const { todos } = props
+	const content = todos.map(todo => <TodoItem key={todo.id} id={todo.id} title={todo.name} />)
+
+	return <StyledUl>{content}</StyledUl>
+}
+
+TodoList.defaultProps = {
+	todos: []
+}
+
+TodoList.propTypes = {
+	todos: PropTypes.arrayOf(PropTypes.object)
+}
+
 export default TodoList

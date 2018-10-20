@@ -27,6 +27,7 @@ const StyledButton = styled.button`
 
 const TodoItem = props => {
   const { id, title } = props
+  console.log('id: ', id);
   return (
     <StyledList>
       <StyledLabel htmlFor={id}>
@@ -38,6 +39,6 @@ const TodoItem = props => {
 }
 TodoItem.propTypes = {
   title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.number.isRequired
 }
 export default TodoItem

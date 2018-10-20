@@ -3,7 +3,9 @@
 exports[`TodoList Component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TodoList />,
+  Symbol(enzyme.__unrendered__): <TodoList
+    todos={Array []}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,60 +19,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": Array [
-        <TodoItem
-          id="todo-1"
-          title="Learn React.js"
-        />,
-        <TodoItem
-          id="todo-2"
-          title="Learn Vue.js"
-        />,
-        <TodoItem
-          id="todo-3"
-          title="Learn Lumen"
-        />,
-      ],
+      "children": Array [],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "id": "todo-1",
-          "title": "Learn React.js",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "id": "todo-2",
-          "title": "Learn Vue.js",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "id": "todo-3",
-          "title": "Learn Lumen",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
+    "rendered": Array [],
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -79,60 +31,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": Array [
-          <TodoItem
-            id="todo-1"
-            title="Learn React.js"
-          />,
-          <TodoItem
-            id="todo-2"
-            title="Learn Vue.js"
-          />,
-          <TodoItem
-            id="todo-3"
-            title="Learn Lumen"
-          />,
-        ],
+        "children": Array [],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "id": "todo-1",
-            "title": "Learn React.js",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "id": "todo-2",
-            "title": "Learn Vue.js",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "id": "todo-3",
-            "title": "Learn Lumen",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
+      "rendered": Array [],
       "type": [Function],
     },
   ],

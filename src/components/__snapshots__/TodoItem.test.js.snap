@@ -4,7 +4,7 @@ exports[`TodoItem Component renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TodoItem
-    id="todo-1"
+    id={1}
     title="Do house chores"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -22,10 +22,10 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <styled.label
-          htmlFor="todo-1"
+          htmlFor={1}
         >
           <input
-            id="todo-1"
+            id={1}
             type="checkbox"
           />
            
@@ -47,13 +47,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
-              id="todo-1"
+              id={1}
               type="checkbox"
             />,
             " ",
             "Do house chores",
           ],
-          "htmlFor": "todo-1",
+          "htmlFor": 1,
         },
         "ref": null,
         "rendered": Array [
@@ -62,7 +62,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "id": "todo-1",
+              "id": 1,
               "type": "checkbox",
             },
             "ref": null,
@@ -97,10 +97,10 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <styled.label
-            htmlFor="todo-1"
+            htmlFor={1}
           >
             <input
-              id="todo-1"
+              id={1}
               type="checkbox"
             />
              
@@ -122,13 +122,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <input
-                id="todo-1"
+                id={1}
                 type="checkbox"
               />,
               " ",
               "Do house chores",
             ],
-            "htmlFor": "todo-1",
+            "htmlFor": 1,
           },
           "ref": null,
           "rendered": Array [
@@ -137,7 +137,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "id": "todo-1",
+                "id": 1,
                 "type": "checkbox",
               },
               "ref": null,

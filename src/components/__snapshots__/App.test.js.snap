@@ -18,8 +18,14 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": Array [
-        <TodoForm />,
-        <TodoList />,
+        <TodoForm
+          currentTodo=""
+          handleOnchangeInput={[Function]}
+          handleSubmit={[Function]}
+        />,
+        <TodoList
+          todos={Array []}
+        />,
       ],
     },
     "ref": null,
@@ -28,7 +34,11 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "currentTodo": "",
+          "handleOnchangeInput": [Function],
+          "handleSubmit": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -37,7 +47,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "todos": Array [],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -52,8 +64,14 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": Array [
-          <TodoForm />,
-          <TodoList />,
+          <TodoForm
+            currentTodo=""
+            handleOnchangeInput={[Function]}
+            handleSubmit={[Function]}
+          />,
+          <TodoList
+            todos={Array []}
+          />,
         ],
       },
       "ref": null,
@@ -62,7 +80,11 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "currentTodo": "",
+            "handleOnchangeInput": [Function],
+            "handleSubmit": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -71,7 +93,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "todos": Array [],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
