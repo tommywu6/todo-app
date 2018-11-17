@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { generateId, addTodo } from '../lib/helper'
+import { generateId, addTodo, AppContext, removeTodo } from '../lib/helper'
 import TodoList from './TodoList'
 import TodoForm from './TodoForm'
 
@@ -12,14 +12,9 @@ const Container = styled.div`
 `
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      currentTodo: '',
-      todos: []
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleOnchangeInput = this.handleOnchangeInput.bind(this)
+  state = {
+    currentTodo: '',
+    todos: []
   }
 
   handleSubmit = evt => {
@@ -27,28 +22,41 @@ class App extends Component {
 
     const { currentTodo, todos } = this.state
 
-    const newTodo = { id: generateId(), name: currentTodo, isComplete: false }
+    if (currentTodo) {
+      const newTodo = { id: generateId(), name: currentTodo, isComplete: false }
 
-    const updatedTodos = addTodo(todos, newTodo)
+      const updatedTodos = addTodo(todos, newTodo)
 
-    this.setState({ todos: updatedTodos, currentTodo: '' })
+      this.setState({ todos: updatedTodos, currentTodo: '' })
+    }
   }
 
   handleOnchangeInput = evt => {
     this.setState({ currentTodo: evt.target.value })
   }
 
+  handleDeleteTodo = id => {
+    const { todos } = this.state
+    const updatedTodos = removeTodo(todos, id)
+
+    this.setState({ todos: updatedTodos })
+  }
+
   render() {
-    const { currentTodo, todos } = this.state
     return (
-      <Container>
-        <TodoForm
-          currentTodo={currentTodo}
-          handleSubmit={this.handleSubmit}
-          handleOnchangeInput={this.handleOnchangeInput}
-        />
-        <TodoList todos={todos} />
-      </Container>
+      <AppContext.Provider
+        value={{
+          state: this.state,
+          handleDeleteTodo: this.handleDeleteTodo,
+          handleSubmit: this.handleSubmit,
+          handleOnchangeInput: this.handleOnchangeInput
+        }}
+      >
+        <Container>
+          <TodoForm />
+          <TodoList />
+        </Container>
+      </AppContext.Provider>
     )
   }
 }

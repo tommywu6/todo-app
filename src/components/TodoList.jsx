@@ -1,25 +1,23 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
-import TodoItem from "./TodoItem"
+import React from 'react'
+import styled from 'styled-components'
+import TodoItem from './TodoItem'
+import { AppContext } from '../lib/helper'
 
 const StyledUl = styled.ul`
-	padding: 0;
+  padding: 0;
 `
 
-const TodoList = props => {
-	const { todos } = props
-	const content = todos.map(todo => <TodoItem key={todo.id} id={todo.id} title={todo.name} />)
+const TodoList = () => (
+  <AppContext.Consumer>
+    {context => {
+      const { todos } = context.state
+      const todoList = todos.length
+        ? todos.map(todo => <TodoItem key={todo.id} id={todo.id} title={todo.name} />)
+        : 'Your todo list is empty. Add one.'
 
-	return <StyledUl>{content}</StyledUl>
-}
-
-TodoList.defaultProps = {
-	todos: []
-}
-
-TodoList.propTypes = {
-	todos: PropTypes.arrayOf(PropTypes.object)
-}
+      return <StyledUl>{todoList}</StyledUl>
+    }}
+  </AppContext.Consumer>
+)
 
 export default TodoList

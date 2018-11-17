@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import { AppContext } from '../lib/helper'
 
 const FormInput = styled.input`
   width: 235px;
@@ -11,29 +11,30 @@ const FormInput = styled.input`
   padding-left: 10px;
 `
 
-const TodoForm = props => {
-  const { handleSubmit, handleOnchangeInput, currentTodo } = props
+const StyledTitle = styled.h3`
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0 20px 0;
+  font-size: 20px;
+`
 
-  return (
-    <div>
-      <p>Enter your todo and hit the Enter key </p>
-      <form onSubmit={handleSubmit}>
-        <FormInput placeholder="Enter new todo" onChange={handleOnchangeInput} value={currentTodo} />
-      </form>
-    </div>
-  )
-}
-
-TodoForm.defaultProps = {
-  currentTodo: '',
-  handleSubmit: () => {},
-  handleOnchangeInput: ()=>{}
-}
-
-TodoForm.propTypes = {
-  currentTodo: PropTypes.string,
-  handleSubmit: PropTypes.func,
-  handleOnchangeInput: PropTypes.func
-}
+const TodoForm = () => (
+  <AppContext.Consumer>
+    {context => (
+      <Fragment>
+        <StyledTitle>My Todos</StyledTitle>
+        <p>Enter your todo and hit the Enter key </p>
+        <form onSubmit={context.handleSubmit}>
+          <FormInput
+            placeholder="Enter new todo"
+            onChange={context.handleOnchangeInput}
+            value={context.state.currentTodo}
+          />
+        </form>
+      </Fragment>
+    )}
+  </AppContext.Consumer>
+)
 
 export default TodoForm

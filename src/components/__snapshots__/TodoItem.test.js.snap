@@ -18,151 +18,51 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <styled.label
-          htmlFor={1}
-        >
-          <input
-            id={1}
-            type="checkbox"
-          />
-           
-          Do house chores
-        </styled.label>,
-        <styled.button
-          type="button"
-        >
-          Delete
-        </styled.button>,
-      ],
+      "children": [Function],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": Array [
-            <input
-              id={1}
-              type="checkbox"
-            />,
-            " ",
-            "Do house chores",
-          ],
-          "htmlFor": 1,
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "id": 1,
-              "type": "checkbox",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          " ",
-          "Do house chores",
-        ],
-        "type": [Function],
+    "rendered": [Function],
+    "type": Object {
+      "$$typeof": Symbol(react.context),
+      "Consumer": [Circular],
+      "Provider": Object {
+        "$$typeof": Symbol(react.provider),
+        "_context": [Circular],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "Delete",
-          "type": "button",
-        },
-        "ref": null,
-        "rendered": "Delete",
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
+      "_calculateChangedBits": null,
+      "_currentRenderer": null,
+      "_currentRenderer2": null,
+      "_currentValue": undefined,
+      "_currentValue2": undefined,
+      "unstable_read": [Function],
+    },
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "function",
       "props": Object {
-        "children": Array [
-          <styled.label
-            htmlFor={1}
-          >
-            <input
-              id={1}
-              type="checkbox"
-            />
-             
-            Do house chores
-          </styled.label>,
-          <styled.button
-            type="button"
-          >
-            Delete
-          </styled.button>,
-        ],
+        "children": [Function],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": Array [
-              <input
-                id={1}
-                type="checkbox"
-              />,
-              " ",
-              "Do house chores",
-            ],
-            "htmlFor": 1,
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "id": 1,
-                "type": "checkbox",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            " ",
-            "Do house chores",
-          ],
-          "type": [Function],
+      "rendered": [Function],
+      "type": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": Object {
+          "$$typeof": Symbol(react.provider),
+          "_context": [Circular],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "Delete",
-            "type": "button",
-          },
-          "ref": null,
-          "rendered": "Delete",
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": undefined,
+        "_currentValue2": undefined,
+        "unstable_read": [Function],
+      },
     },
   ],
   Symbol(enzyme.__options__): Object {

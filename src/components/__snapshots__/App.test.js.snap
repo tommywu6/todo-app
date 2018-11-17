@@ -15,50 +15,28 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "function",
     "props": Object {
-      "children": Array [
+      "children": <styled.div>
         <TodoForm
           currentTodo=""
           handleOnchangeInput={[Function]}
           handleSubmit={[Function]}
-        />,
-        <TodoList
-          todos={Array []}
-        />,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
+        />
+        <TodoList />
+      </styled.div>,
+      "value": Object {
+        "handleDeleteTodo": [Function],
+        "handleOnchangeInput": [Function],
+        "handleSubmit": [Function],
+        "state": Object {
           "currentTodo": "",
-          "handleOnchangeInput": [Function],
-          "handleSubmit": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
           "todos": Array [],
         },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    },
+    "ref": null,
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "class",
@@ -69,9 +47,7 @@ ShallowWrapper {
             handleOnchangeInput={[Function]}
             handleSubmit={[Function]}
           />,
-          <TodoList
-            todos={Array []}
-          />,
+          <TodoList />,
         ],
       },
       "ref": null,
@@ -93,15 +69,109 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {
-            "todos": Array [],
-          },
+          "props": Object {},
           "ref": null,
           "rendered": null,
           "type": [Function],
         },
       ],
       "type": [Function],
+    },
+    "type": Object {
+      "$$typeof": Symbol(react.provider),
+      "_context": Object {
+        "$$typeof": Symbol(react.context),
+        "Consumer": [Circular],
+        "Provider": [Circular],
+        "_calculateChangedBits": null,
+        "_currentRenderer": null,
+        "_currentRenderer2": null,
+        "_currentValue": undefined,
+        "_currentValue2": undefined,
+        "unstable_read": [Function],
+      },
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <styled.div>
+          <TodoForm
+            currentTodo=""
+            handleOnchangeInput={[Function]}
+            handleSubmit={[Function]}
+          />
+          <TodoList />
+        </styled.div>,
+        "value": Object {
+          "handleDeleteTodo": [Function],
+          "handleOnchangeInput": [Function],
+          "handleSubmit": [Function],
+          "state": Object {
+            "currentTodo": "",
+            "todos": Array [],
+          },
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <TodoForm
+              currentTodo=""
+              handleOnchangeInput={[Function]}
+              handleSubmit={[Function]}
+            />,
+            <TodoList />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "currentTodo": "",
+              "handleOnchangeInput": [Function],
+              "handleSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.provider),
+        "_context": Object {
+          "$$typeof": Symbol(react.context),
+          "Consumer": [Circular],
+          "Provider": [Circular],
+          "_calculateChangedBits": null,
+          "_currentRenderer": null,
+          "_currentRenderer2": null,
+          "_currentValue": undefined,
+          "_currentValue2": undefined,
+          "unstable_read": [Function],
+        },
+      },
     },
   ],
   Symbol(enzyme.__options__): Object {

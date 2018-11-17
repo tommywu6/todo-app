@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import { AppContext } from '../lib/helper'
 
 const StyledList = styled.li`
   list-style: none;
@@ -27,18 +28,34 @@ const StyledButton = styled.button`
 
 const TodoItem = props => {
   const { id, title } = props
-  console.log('id: ', id);
+
   return (
-    <StyledList>
-      <StyledLabel htmlFor={id}>
-        <input type="checkbox" id={id} /> {title}
-      </StyledLabel>
-      <StyledButton type="button">Delete</StyledButton>
-    </StyledList>
+    <AppContext.Consumer>
+      {context => {
+        const handleDeleteTodo = () => context.handleDeleteTodo(id)
+
+        return (
+          <StyledList>
+            <StyledLabel htmlFor={id}>
+              <input type="checkbox" id={id} /> {title}
+            </StyledLabel>
+            <StyledButton type="button" onClick={handleDeleteTodo}>
+              Delete
+            </StyledButton>
+          </StyledList>
+        )
+      }}
+    </AppContext.Consumer>
   )
 }
+
+TodoItem.defaultProps = {
+  title: '',
+  id: 1
+}
+
 TodoItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired
+  title: PropTypes.string,
+  id: PropTypes.number
 }
 export default TodoItem
